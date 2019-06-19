@@ -1,0 +1,6 @@
+print('3 x 1 = {}'.format(3*1))
+print('3 x 2 = ', 3*2)
+print('3 x 3 = ', 3*3)
+print('3 x 8 = ', 3*8)
+print('3 x 9 = ', 3*9)
+print('3 x 10 = ', 3*10)
