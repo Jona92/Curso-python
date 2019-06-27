@@ -97,3 +97,22 @@ for pokemon in [1,2,3,4,5,6,7,8,9,10]:
         json.dump(data,f,indent=4)
 
 #-------------------------------
+import csv
+import json
+lista = []
+for pokemon in in [1,2,3,4,5,6,7,8,9,10]:
+    with open('data%.json' % pokemon,'r') as f:
+        data = json.load(f)
+        tipo= data['types'][0]['type']['name']
+        nombre = data['name']
+        lista.append([nombre,tipo])
+
+print(lista)
+
+with open('pokemon.csv',mode='w') as pok_file:
+    file = csv.writer(pok_file,delimiter=','quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    file.writerow(['nombre','tipo'])
+    for item in lista:
+        file.writerow(item)
+
+#--------------------------------
