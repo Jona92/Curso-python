@@ -1,0 +1,3 @@
+Nombre	Apellido	Edad	Edad_real
+----------------------
+juan	grajeda	35	40jona	alvarez	26	31agus	escroto	30	35----------------------
