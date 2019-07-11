@@ -12,10 +12,11 @@ class HomeView(View):
     #     super(HomeView, self).__init__()
     #     self.arg = arg
 
-# class PostView(View):
-#     @property
-#     def pk(self):
-#         return self .pk
-#     def get(self, request, *args, **kwargs):
-#         post = Post.objects.get()
-#         return
+class PostView(View):
+    @property
+    def pk(self, *args, **kwargs):
+        return self.kwargs['pk']
+
+    def get(self, request, *args, **kwargs):
+        post = Post.objects.get(pk=self.pk)
+        return render(request,'post.html',locals())
